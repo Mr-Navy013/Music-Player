@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <div class="music-player">
+        <div class="music-player" id="now-playing"> <span>Creator: NVY</span>Playing x of y music</div>
+        <div class="music-player" id="music-image"></div>
+        <div class="music-player" id="music-name">Music Name</div>
+        <div class="music-player" id="artist-name">Artist Name</div>
+    </div>
+    <div class="music-track-Container">
+        <div id="starting-time">00:00</div>
+        <input type="range" min="1" max="100" class="seek_slider" onchange="seekTo()">
+        <div id="End-time">00:00</div>
+    </div>
+    <div class="music-controll">
+        <button>
+            <img src="shuffle.png"id="shuffle">
+        </button>
+        <button>
+            <img src="next.png" id="previous">
+        </button>
+        <button>
+            <img src="play.png" id="play">
+        </button>
+        <button>
+            <img src="next.png" id="next">
+        </button>
+        <button>
+            <img src="list.png" id="music-list">
+        </button>
+        <div id="music-popup" class="music-popup">
+            <ul id="music-list-container"></ul>
+        </div>
+    </div>
+
+    <script src="MusicPlayer.js"></script>
+</div>   
+</body>
+</html>

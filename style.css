@@ -1,0 +1,240 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:linear-gradient(black, rgb(48, 49, 48)) ;
+    overflow: hidden;
+    user-select: none;
+}
+.container{
+    height: 90vh;
+    width:50%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+
+}
+.music-player{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+   
+}
+span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(101, 101, 104, 0.571) ;
+}
+#now-playing{
+    height: 2rem;
+    gap: 3px;
+    margin-bottom: 2px;
+}
+#music-image{
+    height: 10cm;
+    width: 10cm;
+    margin-top: 50px;
+    border-radius: 50%;
+    border: 2px solid white;
+    box-shadow:  10px 0px 20px 10px rgba(8, 8, 8, 0.292);
+}
+#music-name{
+  font-size: xx-large;
+  font-weight: bolder;
+  margin-top: 20px;
+}
+.music-track-Container{
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: large;
+    display: flex;
+    justify-content: space-between;
+}
+.music-controll{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1cm;
+}
+input{
+    height: 2px;
+    width: 70%;
+    margin-top: 10px;
+    cursor: pointer;
+}
+button img{
+   height: 50px;
+   width:50px;
+   filter: invert(1);
+}
+button{
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+button:active{
+   filter: invert(0.2);
+}
+#previous{
+    transform: rotateY(180deg);
+}
+.music-popup {
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+    padding: 20px;
+    z-index: 1000;
+    background-color: black;
+    color: white;
+    border: 2px solid rgb(195, 207, 204) ;
+}
+
+.music-popup ul {
+    list-style: none;
+
+}
+
+.music-popup li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.music-popup li:hover:hover {
+    background: rgba(21, 21, 22, 0.477);
+}
+/* Mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+        height: auto;
+    }
+
+    #music-image {
+        height: 250px;
+        width: 250px;
+        margin-top: 50px;
+    }
+
+    #music-name {
+        font-size: xx-large;
+    }
+
+    .music-controll {
+        gap:20px;
+        margin-top: 20px;
+    }
+
+    button img {
+        height: 50px;
+        width: 50px;
+    }
+
+    .music-popup {
+        width: 50%;
+        top: 33%;
+        left:50%;
+    }
+}
+
+/* Tablets (481px to 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .container {
+        width: 80%;
+        height: auto;
+    }
+
+    #music-image {
+        height: 250px;
+        width: 250px;
+    }
+
+    #music-name {
+        font-size: x-large;
+    }
+
+    .music-controll {
+        gap: 20px;
+    }
+
+    button img {
+        height: 40px;
+        width: 40px;
+    }
+
+    .music-popup {
+        width: 70%;
+        top: 25%;
+    }
+}
+
+/* Small laptops (769px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        width: 60%;
+    }
+
+    #music-image {
+        height: 300px;
+        width: 300px;
+    }
+
+    #music-name {
+        font-size: xx-large;
+    }
+
+    .music-controll {
+        gap: 30px;
+    }
+
+    button img {
+        height: 45px;
+        width: 45px;
+    }
+
+    .music-popup {
+        width: 50%;
+        top: 30%;
+    }
+}
+
+/* Large screens (above 1025px) */
+@media (min-width: 1025px) {
+    .container {
+        width: 50%;
+    }
+
+    #music-image {
+        height: 10cm;
+        width: 10cm;
+    }
+
+    #music-name {
+        font-size: xx-large;
+    }
+
+    .music-controll {
+        gap: 1cm;
+    }
+
+    button img {
+        height: 50px;
+        width: 50px;
+    }
+
+    .music-popup {
+        width: 20%;
+        top: 30%;
+    }
+}
